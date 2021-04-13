@@ -106,7 +106,6 @@ const HomePage = () => {
         </Container>
       </footer>
     </div>
-    
   )
 }
 

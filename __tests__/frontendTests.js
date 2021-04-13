@@ -13,20 +13,28 @@ describe('React unit tests', () => {
   describe('NavBar', () => {
     let wrapper;
     const props = {
-      label: 'medBay',
-      text: 'Catagories',
+      items: ['FAK', 'MS', 'PPE']
     };
 
     beforeAll(() => {
-      wrapper = shallow(<NavBar {...props} />);
+      wrapper = shallow(<NavBar />);
     });
 
     it('Renders the title text', () => {
       expect(wrapper.text()).toEqual('medBay');
     });
 
-    it('Renders the correct number of Button components', () => {
-      expect(wrapper.find('button').getElements().length).toEqual(2);
-    })
+    // it('Renders the correct number of Button components', () => {
+    //   expect(wrapper.find('button').getElements().length).toEqual(2);
+    // })
+
+    // it('It should display 3 iconButtons in the NavBar', () => {
+    //   // Expect 4 LabeledText components
+    //   expect((wrapper.find({ label: "Market ID" })).prop('text')).toEqual(1);
+    //   expect((wrapper.find({ label: "Location" })).prop('text')).toEqual('LA');
+    //   expect((wrapper.find({ label: "Cards" })).prop('text')).toEqual(3);
+    //   expect((wrapper.find({ label: "% of total" })).prop('text')).toEqual(10);
+    // });
+
   });
 };
